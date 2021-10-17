@@ -80,7 +80,7 @@ if __name__ == "__main__":
 		for Trainingcourse_name, trainingcourse_id, teachers_id in many_to_many_temp
 		for d in teachers if d.id==teachers_id]
 
-	print("Задание А1")
+	print("Задание Г1")
 	res_11 = {}
 	selected_Trainingcourse = [one_traicour[2] for one_traicour in one_to_many if one_traicour[2].startswith('а') or one_traicour[2].startswith('А')]
 	for Trainingcourse_name in selected_Trainingcourse:
@@ -89,7 +89,7 @@ if __name__ == "__main__":
 	print(res_11)
 	print()
 
-	print("Задание A2")
+	print("Задание Г2")
 	res_12_unsorted = []
 	for s in Trainingcourse:
 		s_teachers = list(filter(lambda i: i[2]==s.name, one_to_many))
@@ -102,7 +102,7 @@ if __name__ == "__main__":
 	print(res_12)
 	print()
 	
-	print("Задание А3")
+	print("Задание Г3")
 	res_13 = {}
 	Trainingcourse.sort(key=lambda one_Trainingcourse: one_Trainingcourse.name)
 	for s in Trainingcourse:
