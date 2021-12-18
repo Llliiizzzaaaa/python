@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}РК №2{% endblock %}
+
+{% block content %}
+
+    <center><h1>Список преподавателей</h1></center><hr><br>
+
+    {% if t_list %}
+        {% for t in t_list %}
+            <a href="{% url 'teacher_detail' t.id %}">{{ t.fio }}</a><br>
+        {% endfor %}
+    {% else %}
+        Список пуст
+    {% endif %}
+
+{% endblock %}
